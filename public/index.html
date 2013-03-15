@@ -1,0 +1,62 @@
+<!doctype html>
+<head>
+  <title>A very simple Ember.js and Clojure web app example</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body style="background:white;">
+
+  <script type="text/x-handlebars" data-template-name="application">
+    <div class="main_content container">
+      <div class="row-fluid">
+        <div class="recipe_display span12">
+          <div id="recipe_main_details" class="recipe_main_details">
+              {{#if RecipeTracker.selectedRecipeController.selectedRecipe}}
+                {{#view RecipeTracker.RecipeDetailsView}}
+                  {{#with RecipeTracker.selectedRecipeController.selectedRecipe}}
+                    <h2>{{title}}</h2>
+                    <h4>Directions:</h4>
+                    <div class="recipe_display_details">
+                     <p>{{ingredients}}</p>
+                     <p>{{directions}}</p>
+                    </div>
+                 {{/with}}
+                {{/view}}
+              {{else}}
+                <h2>Please select a recipe (do it!)</h2>
+              {{/if}}
+          </div>      
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row-fluid">
+        <div class="navigation span12">
+          <div class="recipe_list span12">
+            {{#each RecipeTracker.recipesController}}
+              {{#view RecipeTracker.RecipeListingsView contentBinding="this"}}
+                 <ul class="recipe_listings">
+                    <li>{{title}}</li>
+                  </ul>
+              {{/view}}
+            {{/each}}   
+          </div>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script src="js/libs/jquery-1.8.3.js"></script>
+  <script src="js/libs/handlebars.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.1.js"></script>
+  <script src="js/libs/bootstrap.js"></script>
+  <script src="js/app.js"></script>  
+  <script src="js/models/recipe.js"></script>
+  <script src="js/controllers/application.js"></script>
+  <script src="js/views/application.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/ajax_helpers.js"></script>
+
+</body>
+</html>

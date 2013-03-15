@@ -1,0 +1,45 @@
+
+.main_content {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  margin: 10px auto 10px auto;
+  border: 2px solid darkgrey;
+  color: black;
+  background: white;
+}
+
+.recipe_display {
+  padding: 10px;
+  height: 50%;
+  width: 60%;
+  background: #eee;
+  color: black;
+}
+
+.navigation {
+  border: 0px;
+  height: 150px;
+}
+
+.recipe_list {
+
+}
+
+.recipe_list ul {
+  list-style: none;
+  margin: 5px 5px 5px 5px;
+}
+
+.recipe_listings li {
+  float: left;
+  width: 205px;
+  height: 25px;
+  background-color: #d3d3d3;
+  margin-left: 5px;
+  margin-top: 5px;
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  color: black;
+  border-radius: 15px;
+}
