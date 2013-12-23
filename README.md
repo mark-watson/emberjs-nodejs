@@ -1,6 +1,6 @@
 # Sample Ember.js and Node.js app
 
-Mark Watson March 14, 2013
+Mark Watson December 23, 2013
 
 A simple Ember.js and Node.js web app template - a minimal example of making a REST call from Ember.js back to a REST service in Node.js.
 
